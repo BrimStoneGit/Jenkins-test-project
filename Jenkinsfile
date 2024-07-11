@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                fileDownloadOperation('https://ash-speed.hetzner.com/100MB.bin')
+                fileDownloadOperation(url: 'https://ash-speed.hetzner.com/100MB.bin')
                 sh 'ls -la'
             }
         }
