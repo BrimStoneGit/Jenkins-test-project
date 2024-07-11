@@ -11,6 +11,7 @@ pipeline {
         stage('build') {
             steps {
                 testFunc("this is a test")
+                testFunc("this is a second test")
             }
         }
     }
