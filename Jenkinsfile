@@ -10,7 +10,6 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                downloadFile()
                 sh 'ls -la'
             }
         }
