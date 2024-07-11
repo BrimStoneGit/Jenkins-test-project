@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'ls -la'
+                testFunc("this is a test")
             }
         }
     }
