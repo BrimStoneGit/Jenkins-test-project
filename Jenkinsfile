@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'wget https://ash-speed.hetzner.com/100MB.bin'
+                sh 'wget https://ash-speed.hetzner.com/10GB.bin'
                 sh 'ls -la'
             }
         }
