@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                downloadFile()
+                minimalDownload()
             }
         }
     }
