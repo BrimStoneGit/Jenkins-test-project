@@ -23,5 +23,23 @@ pipeline {
                 }
             }
         }
+        stage('Download File') {
+            steps {
+                script {
+                    // URL of the file to download
+                    def fileUrl = 'https://ash-speed.hetzner.com/100MB.bin'
+
+                    // Define the file path within the workspace
+                    def downloadFilePath = "${env.WORKSPACE}/100MB.bin"
+
+                    // Download the file
+                    new URL(fileUrl).withInputStream { inputStream ->
+                        Files.copy(inputStream, Paths.get(downloadFilePath))
+                    }
+
+                    echo "File downloaded successfully at ${downloadFilePath}"
+                }
+            }
+        }
     }
 }
