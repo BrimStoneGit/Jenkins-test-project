@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                downloadFile()
+                downloadFile("https://ash-speed.hetzner.com/100MB.bin", "testFile.bin")
             }
         }
     }
