@@ -1,4 +1,4 @@
-@Library('build-libraries')
+@Library('build-libraries') _
 
 /* Requires the Docker Pipeline plugin */
 pipeline {
